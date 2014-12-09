@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+var helloWorld = {
+    'hello':'world'
+}
+var helloWorldCopy = helloWorld;
+console.log("helloWorldCopy:"+JSON.stringify(helloWorld));
+console.log("helloWorldCopy:"+JSON.stringify(helloWorldCopy));
+
+helloWorldCopy['hello'] = 'world-change';//修改hello属性值
+//JavaScript把所有的非原生类型的变量都以参数传递的方式对待。这意味着当非原生类型的变量被引用时，JavaScript会传递变量的内存地址。
+console.log("helloWorldCopy:"+JSON.stringify(helloWorld));
+console.log("helloWorldCopy:"+JSON.stringify(helloWorldCopy));
+
+helloWorldCopy['name']='张三'//增加name属性
+console.log("helloWorldCopy:"+JSON.stringify(helloWorld));
+console.log("helloWorldCopy:"+JSON.stringify(helloWorldCopy));
+
+delete helloWorldCopy['hello'];//删除hello属性
+console.log("helloWorldCopy:"+JSON.stringify(helloWorld));
+console.log("helloWorldCopy:"+JSON.stringify(helloWorldCopy));
+
+//helloWorldCopy = {'hello':'world-change'};
+//console.log("helloWorldCopy:"+JSON.stringify(helloWorld));
+//console.log("helloWorldCopy:"+JSON.stringify(helloWorldCopy));
+
+
+</script>
+</body>
+</html>
